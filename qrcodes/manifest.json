@@ -1,0 +1,86 @@
+{
+  "baseUrl": "https://pi-pizzeria-3d-menu.onrender.com",
+  "generatedAt": "2026-10-03T08:57:17.365Z",
+  "codes": {
+    "pizza-italian": {
+      "id": "pz-01",
+      "url": "https://pi-pizzeria-3d-menu.onrender.com/product/pizza-italian/",
+      "png": "qrcodes/pizza-italian.png"
+    },
+    "pizza-margherita": {
+      "id": "pz-02",
+      "url": "https://pi-pizzeria-3d-menu.onrender.com/product/pizza-margherita/",
+      "png": "qrcodes/pizza-margherita.png"
+    },
+    "pizza-pepperoni": {
+      "id": "pz-03",
+      "url": "https://pi-pizzeria-3d-menu.onrender.com/product/pizza-pepperoni/",
+      "png": "qrcodes/pizza-pepperoni.png"
+    },
+    "pizza-khodarji": {
+      "id": "pz-04",
+      "url": "https://pi-pizzeria-3d-menu.onrender.com/product/pizza-khodarji/",
+      "png": "qrcodes/pizza-khodarji.png"
+    },
+    "pizza-ceaser": {
+      "id": "pz-05",
+      "url": "https://pi-pizzeria-3d-menu.onrender.com/product/pizza-ceaser/",
+      "png": "qrcodes/pizza-ceaser.png"
+    },
+    "pizza-burgerys": {
+      "id": "pz-06",
+      "url": "https://pi-pizzeria-3d-menu.onrender.com/product/pizza-burgerys/",
+      "png": "qrcodes/pizza-burgerys.png"
+    },
+    "pizza-chicken-shawerma": {
+      "id": "pz-07",
+      "url": "https://pi-pizzeria-3d-menu.onrender.com/product/pizza-chicken-shawerma/",
+      "png": "qrcodes/pizza-chicken-shawerma.png"
+    },
+    "pizza-beef-shawerma": {
+      "id": "pz-08",
+      "url": "https://pi-pizzeria-3d-menu.onrender.com/product/pizza-beef-shawerma/",
+      "png": "qrcodes/pizza-beef-shawerma.png"
+    },
+    "pizza-enchilada": {
+      "id": "pz-09",
+      "url": "https://pi-pizzeria-3d-menu.onrender.com/product/pizza-enchilada/",
+      "png": "qrcodes/pizza-enchilada.png"
+    },
+    "pizza-curry-station": {
+      "id": "pz-10",
+      "url": "https://pi-pizzeria-3d-menu.onrender.com/product/pizza-curry-station/",
+      "png": "qrcodes/pizza-curry-station.png"
+    },
+    "pizza-hot-dog": {
+      "id": "pz-11",
+      "url": "https://pi-pizzeria-3d-menu.onrender.com/product/pizza-hot-dog/",
+      "png": "qrcodes/pizza-hot-dog.png"
+    },
+    "pizza-dynamite": {
+      "id": "pz-12",
+      "url": "https://pi-pizzeria-3d-menu.onrender.com/product/pizza-dynamite/",
+      "png": "qrcodes/pizza-dynamite.png"
+    },
+    "garlic-bread": {
+      "id": "ah-02",
+      "url": "https://pi-pizzeria-3d-menu.onrender.com/product/garlic-bread/",
+      "png": "qrcodes/garlic-bread.png"
+    },
+    "lasagna": {
+      "id": "ah-03",
+      "url": "https://pi-pizzeria-3d-menu.onrender.com/product/lasagna/",
+      "png": "qrcodes/lasagna.png"
+    },
+    "fries": {
+      "id": "ah-04",
+      "url": "https://pi-pizzeria-3d-menu.onrender.com/product/fries/",
+      "png": "qrcodes/fries.png"
+    },
+    "salad-plate": {
+      "id": "ac-01",
+      "url": "https://pi-pizzeria-3d-menu.onrender.com/product/salad-plate/",
+      "png": "qrcodes/salad-plate.png"
+    }
+  }
+}

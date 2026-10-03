@@ -1,0 +1,37 @@
+{
+  "name": "pi-pizzeria-3d-menu",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pi Pizzeria interactive menu: per-product QR codes that open a mobile 3D product page.",
+  "type": "module",
+  "scripts": {
+    "assets": "python scripts/prepare_textures.py",
+    "models": "node scripts/build-models.mjs",
+    "models:optimize": "node scripts/optimize-models.mjs",
+    "qr": "node scripts/generate-qr.mjs",
+    "menu": "python scripts/compose_menu.py",
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "start": "npm run build && npm run serve",
+    "validate": "node scripts/validate.mjs",
+    "validate:http": "node scripts/validate.mjs --http",
+    "all": "npm run qr && npm run menu && npm run build && npm run validate"
+  },
+  "dependencies": {
+    "@google/model-viewer": "^4.3.1"
+  },
+  "devDependencies": {
+    "@gltf-transform/cli": "^4.5.1",
+    "@gltf-transform/core": "^4.5.1",
+    "@gltf-transform/extensions": "^4.5.1",
+    "@gltf-transform/functions": "^4.5.1",
+    "gltf-validator": "^2.0.0-dev.3.10",
+    "jpeg-js": "^0.4.4",
+    "jsqr": "^1.4.0",
+    "pngjs": "^7.0.0",
+    "qrcode": "^1.5.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

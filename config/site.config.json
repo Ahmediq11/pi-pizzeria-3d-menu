@@ -1,0 +1,104 @@
+{
+  "_comment": "BASE_URL (environment variable) overrides baseUrl. QR codes encode baseUrl + productPath. Change it, then run `npm run all` (or `npm run qr && npm run menu && npm run build`).",
+  "baseUrl": "https://pi-pizzeria-3d-menu.onrender.com",
+  "productPath": "/product/{slug}/",
+  "restaurant": {
+    "name": {
+      "en": "pi pizzeria",
+      "ar": "باي بيتزا"
+    },
+    "group": "Chili House · Lee's",
+    "website": "https://www.chili-group.com"
+  },
+  "currency": {
+    "code": "IQD",
+    "label": {
+      "en": "IQD",
+      "ar": "د.ع"
+    }
+  },
+  "sizes": {
+    "small": {
+      "en": "Small",
+      "ar": "صغير"
+    },
+    "medium": {
+      "en": "Medium",
+      "ar": "وسط"
+    },
+    "large": {
+      "en": "Large",
+      "ar": "كبير"
+    },
+    "single": {
+      "en": "Price",
+      "ar": "السعر"
+    },
+    "plate": {
+      "en": "Per plate",
+      "ar": "الطبق"
+    }
+  },
+  "categories": [
+    {
+      "id": "pizza",
+      "name": {
+        "en": "Pizza",
+        "ar": "البيتزا"
+      }
+    },
+    {
+      "id": "appetizers-hot",
+      "name": {
+        "en": "Appetizers",
+        "ar": "المقبلات"
+      }
+    },
+    {
+      "id": "appetizers-cold",
+      "name": {
+        "en": "Salads",
+        "ar": "سلطاتنا"
+      }
+    }
+  ],
+  "qr": {
+    "errorCorrectionLevel": "Q",
+    "margin": 2,
+    "width": 720,
+    "dark": "#2b2626",
+    "light": "#ffffff"
+  },
+  "menu": {
+    "_comment": "Fonts used to draw QR labels on the menu pages. First existing file wins. Kristen ITC is the font used by the original menu.",
+    "fontLatin": [
+      "C:/Windows/Fonts/ITCKRIST.TTF",
+      "/Library/Fonts/Kristen ITC.ttf",
+      "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+    ],
+    "fontArabic": [
+      "C:/Windows/Fonts/DUBAI-MEDIUM.TTF",
+      "C:/Windows/Fonts/tahoma.ttf",
+      "/usr/share/fonts/truetype/noto/NotoSansArabic-Regular.ttf"
+    ],
+    "label": {
+      "en": "Scan to see it in 3D",
+      "ar": "امسح لمشاهدة الطبق ثلاثي الأبعاد"
+    }
+  },
+  "viewer": {
+    "_comment": "model-viewer camera framing. 'default' applies to all; a category key overrides it; a product's own \"viewer\" object overrides both. Units: glTF metres (+Z = front).",
+    "default": {
+      "cameraOrbit": "0deg 58deg 100%",
+      "cameraTarget": "auto auto auto",
+      "minCameraOrbit": "auto 5deg auto",
+      "maxCameraOrbit": "auto 90deg auto"
+    },
+    "pizza": {
+      "cameraOrbit": "180deg 56deg 66%",
+      "cameraTarget": "0m 0.012m -0.072m",
+      "minCameraOrbit": "auto 5deg 30%",
+      "maxCameraOrbit": "auto 90deg 140%"
+    }
+  }
+}

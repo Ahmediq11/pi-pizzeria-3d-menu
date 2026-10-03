@@ -1,0 +1,210 @@
+{
+ "_comment": "Where each product's texture is taken from in the ORIGINAL menu photos (menu/original). Coordinates are in source-image pixels. Used by scripts/prepare_textures.py. Pizza circles were fitted by hand and checked visually.",
+ "wood": {
+  "image": "04-pizza-margherita.jpg",
+  "rect": [
+   520,
+   1592,
+   60,
+   105
+  ]
+ },
+ "pizzas": {
+  "pizza-italian": {
+   "image": "03-pizza-italian.jpg",
+   "circle": [
+    540,
+    930,
+    460
+   ],
+   "crust": 0.13
+  },
+  "pizza-margherita": {
+   "image": "04-pizza-margherita.jpg",
+   "circle": [
+    557,
+    907,
+    482
+   ],
+   "crust": 0.12
+  },
+  "pizza-pepperoni": {
+   "image": "05-pizza-pepperoni.jpg",
+   "circle": [
+    543,
+    892,
+    497
+   ],
+   "crust": 0.12
+  },
+  "pizza-khodarji": {
+   "image": "06-pizza-khodarji.jpg",
+   "circle": [
+    545,
+    882,
+    487
+   ],
+   "crust": 0.11
+  },
+  "pizza-ceaser": {
+   "image": "07-pizza-ceaser.jpg",
+   "circle": [
+    511,
+    892,
+    460
+   ],
+   "crust": 0.11
+  },
+  "pizza-burgerys": {
+   "image": "08-pizza-burgerys.jpg",
+   "circle": [
+    568,
+    882,
+    508
+   ],
+   "crust": 0.13
+  },
+  "pizza-chicken-shawerma": {
+   "image": "09-pizza-chicken-shawerma.jpg",
+   "circle": [
+    522,
+    845,
+    490
+   ],
+   "crust": 0.11
+  },
+  "pizza-beef-shawerma": {
+   "image": "10-pizza-beef-shawerma.jpg",
+   "circle": [
+    517,
+    838,
+    517
+   ],
+   "crust": 0.11
+  },
+  "pizza-enchilada": {
+   "image": "11-pizza-enchilada.jpg",
+   "circle": [
+    525,
+    814,
+    498
+   ],
+   "crust": 0.13
+  },
+  "pizza-curry-station": {
+   "image": "12-pizza-curry-station.jpg",
+   "circle": [
+    543,
+    845,
+    515
+   ],
+   "crust": 0.11
+  },
+  "pizza-hot-dog": {
+   "image": "13-pizza-hot-dog.jpg",
+   "circle": [
+    520,
+    882,
+    490
+   ],
+   "crust": 0.12
+  },
+  "pizza-dynamite": {
+   "image": "14-pizza-dynamite.jpg",
+   "circle": [
+    530,
+    845,
+    477
+   ],
+   "crust": 0.12
+  }
+ },
+ "patches": {
+  "_comment": "Rotated rectangles [cx, cy, w, h, angleDeg] (OpenCV minAreaRect convention).",
+  "garlic-bread": {
+   "image": "01-appetizers-hot.jpg",
+   "top": [
+    150,
+    1130,
+    205,
+    330,
+    -18
+   ]
+  },
+  "lasagna": {
+   "image": "01-appetizers-hot.jpg",
+   "top": [
+    1000,
+    445,
+    130,
+    215,
+    -27
+   ]
+  },
+  "fries": {
+   "image": "01-appetizers-hot.jpg",
+   "top": [
+    565,
+    1270,
+    360,
+    300,
+    0
+   ]
+  },
+  "salad-plate": {
+   "image": "02-appetizers-cold.jpg",
+   "bowls": [
+    [
+     131,
+     258,
+     64
+    ],
+    [
+     295,
+     259,
+     62
+    ],
+    [
+     457,
+     255,
+     66
+    ]
+   ]
+  }
+ },
+ "productPhotos": {
+  "_comment": "Square crops [x, y, size] of the original page used as the product photo on the product page.",
+  "garlic-bread": [
+   "01-appetizers-hot.jpg",
+   0,
+   650,
+   380
+  ],
+  "lasagna": [
+   "01-appetizers-hot.jpg",
+   600,
+   120,
+   480
+  ],
+  "fries": [
+   "01-appetizers-hot.jpg",
+   330,
+   1020,
+   700
+  ],
+  "salad-plate": [
+   "02-appetizers-cold.jpg",
+   20,
+   130,
+   520
+  ]
+ },
+ "logo": {
+  "image": "00-cover-logo.jpg",
+  "circle": [
+   548,
+   935,
+   268
+  ]
+ }
+}

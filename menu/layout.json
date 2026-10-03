@@ -1,0 +1,27 @@
+{
+  "_comment": "Where each product's QR card is placed on the final menu pages (menu/final). x/y = top-left of the card in OUTPUT pixels; qr = QR size in px. style: full (QR + EN/AR label), compact (QR + one short line, for tight spots), horizontal (label left, QR right). Positions avoid product names, prices and the dishes themselves.",
+  "output": { "width": 1080, "height": 1920, "jpegQuality": 93, "pdf": "pi-pizzeria-menu.pdf" },
+  "pages": [
+    { "file": "00-cover-logo.jpg", "qrs": [] },
+    { "file": "01-appetizers-hot.jpg", "qrs": [
+      { "slug": "garlic-bread",    "x": 486, "y": 846,  "qr": 136, "style": "compact" },
+      { "slug": "lasagna",         "x": 828, "y": 794,  "qr": 136, "style": "compact" },
+      { "slug": "fries",           "x": 776, "y": 1700, "qr": 136, "style": "compact" }
+    ]},
+    { "file": "02-appetizers-cold.jpg", "qrs": [
+      { "slug": "salad-plate", "x": 520, "y": 16, "qr": 160, "style": "horizontal" }
+    ]},
+    { "file": "03-pizza-italian.jpg",          "qrs": [{ "slug": "pizza-italian",          "x": 428, "y": 1590, "qr": 186, "style": "full" }] },
+    { "file": "04-pizza-margherita.jpg",       "qrs": [{ "slug": "pizza-margherita",       "x": 428, "y": 1590, "qr": 186, "style": "full" }] },
+    { "file": "05-pizza-pepperoni.jpg",        "qrs": [{ "slug": "pizza-pepperoni",        "x": 428, "y": 1590, "qr": 186, "style": "full" }] },
+    { "file": "06-pizza-khodarji.jpg",         "qrs": [{ "slug": "pizza-khodarji",         "x": 428, "y": 1590, "qr": 186, "style": "full" }] },
+    { "file": "07-pizza-ceaser.jpg",           "qrs": [{ "slug": "pizza-ceaser",           "x": 428, "y": 1590, "qr": 186, "style": "full" }] },
+    { "file": "08-pizza-burgerys.jpg",         "qrs": [{ "slug": "pizza-burgerys",         "x": 428, "y": 1590, "qr": 186, "style": "full" }] },
+    { "file": "09-pizza-chicken-shawerma.jpg", "qrs": [{ "slug": "pizza-chicken-shawerma", "x": 428, "y": 1590, "qr": 186, "style": "full" }] },
+    { "file": "10-pizza-beef-shawerma.jpg",    "qrs": [{ "slug": "pizza-beef-shawerma",    "x": 428, "y": 1590, "qr": 186, "style": "full" }] },
+    { "file": "11-pizza-enchilada.jpg",        "qrs": [{ "slug": "pizza-enchilada",        "x": 428, "y": 1590, "qr": 186, "style": "full" }] },
+    { "file": "12-pizza-curry-station.jpg",    "qrs": [{ "slug": "pizza-curry-station",    "x": 428, "y": 1590, "qr": 186, "style": "full" }] },
+    { "file": "13-pizza-hot-dog.jpg",          "qrs": [{ "slug": "pizza-hot-dog",          "x": 428, "y": 1590, "qr": 186, "style": "full" }] },
+    { "file": "14-pizza-dynamite.jpg",         "qrs": [{ "slug": "pizza-dynamite",         "x": 428, "y": 1590, "qr": 186, "style": "full" }] }
+  ]
+}

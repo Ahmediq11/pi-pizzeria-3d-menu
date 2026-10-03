@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "pi pizzeria products",
+  "type": "object",
+  "required": ["products"],
+  "properties": {
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "slug", "category", "name", "prices", "image", "model", "qr", "source", "placeholders"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "category": { "enum": ["pizza", "appetizers-hot", "appetizers-cold"] },
+          "menuNumber": { "type": "integer" },
+          "name": { "$ref": "#/$defs/i18n" },
+          "description": { "$ref": "#/$defs/i18n" },
+          "prices": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["size", "amount"],
+              "properties": { "size": { "type": "string" }, "amount": { "type": "integer", "minimum": 0 } }
+            }
+          },
+          "image": { "type": "string" },
+          "poster": { "type": "string" },
+          "model": { "type": "string" },
+          "qr": { "type": "string" },
+          "source": {
+            "type": "object",
+            "properties": { "menuPage": { "type": "string" }, "originalFile": { "type": "string" } }
+          },
+          "placeholders": { "type": "array", "items": { "enum": ["name", "description", "prices", "image", "model"] } },
+          "notes": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "i18n": {
+      "type": "object",
+      "required": ["en", "ar"],
+      "properties": { "en": { "type": "string" }, "ar": { "type": "string" } }
+    }
+  }
+}

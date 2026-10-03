@@ -1,0 +1,581 @@
+{
+  "$schema": "./products.schema.json",
+  "products": [
+    {
+      "id": "pz-01",
+      "slug": "pizza-italian",
+      "category": "pizza",
+      "menuNumber": 1,
+      "name": {
+        "en": "Italian",
+        "ar": "الايطالية"
+      },
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "prices": [
+        {
+          "size": "small",
+          "amount": 12000
+        },
+        {
+          "size": "medium",
+          "amount": 15000
+        },
+        {
+          "size": "large",
+          "amount": 18000
+        }
+      ],
+      "image": "/assets/products/pizza-italian.jpg",
+      "poster": "/assets/posters/pizza-italian.webp",
+      "model": "/models/pizza-italian.glb",
+      "qr": "/qrcodes/pizza-italian.png",
+      "source": {
+        "menuPage": "menu/original/03-pizza-italian.jpg",
+        "originalFile": "images/snapgram.io_356920894137.jpg"
+      },
+      "placeholders": [],
+      "notes": ""
+    },
+    {
+      "id": "pz-02",
+      "slug": "pizza-margherita",
+      "category": "pizza",
+      "menuNumber": 2,
+      "name": {
+        "en": "Margherita",
+        "ar": "مارجريتا"
+      },
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "prices": [
+        {
+          "size": "small",
+          "amount": 6000
+        },
+        {
+          "size": "medium",
+          "amount": 8000
+        },
+        {
+          "size": "large",
+          "amount": 12000
+        }
+      ],
+      "image": "/assets/products/pizza-margherita.jpg",
+      "poster": "/assets/posters/pizza-margherita.webp",
+      "model": "/models/pizza-margherita.glb",
+      "qr": "/qrcodes/pizza-margherita.png",
+      "source": {
+        "menuPage": "menu/original/04-pizza-margherita.jpg",
+        "originalFile": "images/snapgram.io_356920894188.jpg"
+      },
+      "placeholders": [],
+      "notes": ""
+    },
+    {
+      "id": "pz-03",
+      "slug": "pizza-pepperoni",
+      "category": "pizza",
+      "menuNumber": 3,
+      "name": {
+        "en": "Pepperoni",
+        "ar": "البيبروني"
+      },
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "prices": [
+        {
+          "size": "small",
+          "amount": 11000
+        },
+        {
+          "size": "medium",
+          "amount": 13000
+        },
+        {
+          "size": "large",
+          "amount": 15000
+        }
+      ],
+      "image": "/assets/products/pizza-pepperoni.jpg",
+      "poster": "/assets/posters/pizza-pepperoni.webp",
+      "model": "/models/pizza-pepperoni.glb",
+      "qr": "/qrcodes/pizza-pepperoni.png",
+      "source": {
+        "menuPage": "menu/original/05-pizza-pepperoni.jpg",
+        "originalFile": "images/snapgram.io_356920898091.jpg"
+      },
+      "placeholders": [],
+      "notes": ""
+    },
+    {
+      "id": "pz-04",
+      "slug": "pizza-khodarji",
+      "category": "pizza",
+      "menuNumber": 4,
+      "name": {
+        "en": "Khodarji",
+        "ar": "الخضارجي"
+      },
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "prices": [
+        {
+          "size": "small",
+          "amount": 6000
+        },
+        {
+          "size": "medium",
+          "amount": 8000
+        },
+        {
+          "size": "large",
+          "amount": 12000
+        }
+      ],
+      "image": "/assets/products/pizza-khodarji.jpg",
+      "poster": "/assets/posters/pizza-khodarji.webp",
+      "model": "/models/pizza-khodarji.glb",
+      "qr": "/qrcodes/pizza-khodarji.png",
+      "source": {
+        "menuPage": "menu/original/06-pizza-khodarji.jpg",
+        "originalFile": "images/snapgram.io_356920902676.jpg"
+      },
+      "placeholders": [],
+      "notes": ""
+    },
+    {
+      "id": "pz-05",
+      "slug": "pizza-ceaser",
+      "category": "pizza",
+      "menuNumber": 5,
+      "name": {
+        "en": "Ceaser",
+        "ar": "السيزار"
+      },
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "prices": [
+        {
+          "size": "small",
+          "amount": 11000
+        },
+        {
+          "size": "medium",
+          "amount": 14000
+        },
+        {
+          "size": "large",
+          "amount": 17000
+        }
+      ],
+      "image": "/assets/products/pizza-ceaser.jpg",
+      "poster": "/assets/posters/pizza-ceaser.webp",
+      "model": "/models/pizza-ceaser.glb",
+      "qr": "/qrcodes/pizza-ceaser.png",
+      "source": {
+        "menuPage": "menu/original/07-pizza-ceaser.jpg",
+        "originalFile": "images/snapgram.io_356920902676 (1).jpg"
+      },
+      "placeholders": [],
+      "notes": "Spelling 'CEASER' kept exactly as printed on the menu."
+    },
+    {
+      "id": "pz-06",
+      "slug": "pizza-burgerys",
+      "category": "pizza",
+      "menuNumber": 6,
+      "name": {
+        "en": "Burgerys",
+        "ar": "البركر"
+      },
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "prices": [
+        {
+          "size": "small",
+          "amount": 12000
+        },
+        {
+          "size": "medium",
+          "amount": 15000
+        },
+        {
+          "size": "large",
+          "amount": 18000
+        }
+      ],
+      "image": "/assets/products/pizza-burgerys.jpg",
+      "poster": "/assets/posters/pizza-burgerys.webp",
+      "model": "/models/pizza-burgerys.glb",
+      "qr": "/qrcodes/pizza-burgerys.png",
+      "source": {
+        "menuPage": "menu/original/08-pizza-burgerys.jpg",
+        "originalFile": "images/snapgram.io_356920908063.jpg"
+      },
+      "placeholders": [],
+      "notes": "Name kept exactly as printed ('BURGERYS')."
+    },
+    {
+      "id": "pz-07",
+      "slug": "pizza-chicken-shawerma",
+      "category": "pizza",
+      "menuNumber": 7,
+      "name": {
+        "en": "Chicken Shawerma",
+        "ar": "شاورما الدجاج"
+      },
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "prices": [
+        {
+          "size": "small",
+          "amount": 11000
+        },
+        {
+          "size": "medium",
+          "amount": 14000
+        },
+        {
+          "size": "large",
+          "amount": 17000
+        }
+      ],
+      "image": "/assets/products/pizza-chicken-shawerma.jpg",
+      "poster": "/assets/posters/pizza-chicken-shawerma.webp",
+      "model": "/models/pizza-chicken-shawerma.glb",
+      "qr": "/qrcodes/pizza-chicken-shawerma.png",
+      "source": {
+        "menuPage": "menu/original/09-pizza-chicken-shawerma.jpg",
+        "originalFile": "images/snapgram.io_356920911898.jpg"
+      },
+      "placeholders": [],
+      "notes": ""
+    },
+    {
+      "id": "pz-08",
+      "slug": "pizza-beef-shawerma",
+      "category": "pizza",
+      "menuNumber": 8,
+      "name": {
+        "en": "Beef Shawerma",
+        "ar": "شاورما اللحم"
+      },
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "prices": [
+        {
+          "size": "small",
+          "amount": 12000
+        },
+        {
+          "size": "medium",
+          "amount": 15000
+        },
+        {
+          "size": "large",
+          "amount": 18000
+        }
+      ],
+      "image": "/assets/products/pizza-beef-shawerma.jpg",
+      "poster": "/assets/posters/pizza-beef-shawerma.webp",
+      "model": "/models/pizza-beef-shawerma.glb",
+      "qr": "/qrcodes/pizza-beef-shawerma.png",
+      "source": {
+        "menuPage": "menu/original/10-pizza-beef-shawerma.jpg",
+        "originalFile": "images/snapgram.io_356920916792.jpg"
+      },
+      "placeholders": [],
+      "notes": ""
+    },
+    {
+      "id": "pz-09",
+      "slug": "pizza-enchilada",
+      "category": "pizza",
+      "menuNumber": 9,
+      "name": {
+        "en": "Enchilada",
+        "ar": "انشيلادا"
+      },
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "prices": [
+        {
+          "size": "small",
+          "amount": 11000
+        },
+        {
+          "size": "medium",
+          "amount": 14000
+        },
+        {
+          "size": "large",
+          "amount": 17000
+        }
+      ],
+      "image": "/assets/products/pizza-enchilada.jpg",
+      "poster": "/assets/posters/pizza-enchilada.webp",
+      "model": "/models/pizza-enchilada.glb",
+      "qr": "/qrcodes/pizza-enchilada.png",
+      "source": {
+        "menuPage": "menu/original/11-pizza-enchilada.jpg",
+        "originalFile": "images/snapgram.io_356920916803.jpg"
+      },
+      "placeholders": [],
+      "notes": ""
+    },
+    {
+      "id": "pz-10",
+      "slug": "pizza-curry-station",
+      "category": "pizza",
+      "menuNumber": 10,
+      "name": {
+        "en": "Curry Station",
+        "ar": "كاري ستايشن"
+      },
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "prices": [
+        {
+          "size": "small",
+          "amount": 11000
+        },
+        {
+          "size": "medium",
+          "amount": 14000
+        },
+        {
+          "size": "large",
+          "amount": 17000
+        }
+      ],
+      "image": "/assets/products/pizza-curry-station.jpg",
+      "poster": "/assets/posters/pizza-curry-station.webp",
+      "model": "/models/pizza-curry-station.glb",
+      "qr": "/qrcodes/pizza-curry-station.png",
+      "source": {
+        "menuPage": "menu/original/12-pizza-curry-station.jpg",
+        "originalFile": "images/snapgram.io_356920919428.jpg"
+      },
+      "placeholders": [],
+      "notes": ""
+    },
+    {
+      "id": "pz-11",
+      "slug": "pizza-hot-dog",
+      "category": "pizza",
+      "menuNumber": 11,
+      "name": {
+        "en": "Hot Dog",
+        "ar": "هوت دوغ"
+      },
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "prices": [
+        {
+          "size": "small",
+          "amount": 11000
+        },
+        {
+          "size": "medium",
+          "amount": 13000
+        },
+        {
+          "size": "large",
+          "amount": 15000
+        }
+      ],
+      "image": "/assets/products/pizza-hot-dog.jpg",
+      "poster": "/assets/posters/pizza-hot-dog.webp",
+      "model": "/models/pizza-hot-dog.glb",
+      "qr": "/qrcodes/pizza-hot-dog.png",
+      "source": {
+        "menuPage": "menu/original/13-pizza-hot-dog.jpg",
+        "originalFile": "images/snapgram.io_356920923548.jpg"
+      },
+      "placeholders": [],
+      "notes": "Arabic size labels are partly covered in the photo; prices assumed in the usual small/medium/large order."
+    },
+    {
+      "id": "pz-12",
+      "slug": "pizza-dynamite",
+      "category": "pizza",
+      "menuNumber": 12,
+      "name": {
+        "en": "Dynamite",
+        "ar": "داينامايت"
+      },
+      "description": {
+        "en": "",
+        "ar": ""
+      },
+      "prices": [
+        {
+          "size": "small",
+          "amount": 11000
+        },
+        {
+          "size": "medium",
+          "amount": 14000
+        },
+        {
+          "size": "large",
+          "amount": 17000
+        }
+      ],
+      "image": "/assets/products/pizza-dynamite.jpg",
+      "poster": "/assets/posters/pizza-dynamite.webp",
+      "model": "/models/pizza-dynamite.glb",
+      "qr": "/qrcodes/pizza-dynamite.png",
+      "source": {
+        "menuPage": "menu/original/14-pizza-dynamite.jpg",
+        "originalFile": "images/snapgram.io_356920927705.jpg"
+      },
+      "placeholders": [],
+      "notes": ""
+    },
+    {
+      "id": "ah-02",
+      "slug": "garlic-bread",
+      "category": "appetizers-hot",
+      "menuNumber": 1,
+      "name": {
+        "en": "Garlic Bread",
+        "ar": "خبز الثومي"
+      },
+      "description": {
+        "en": "with cheese",
+        "ar": "مع الجبنة"
+      },
+      "prices": [
+        {
+          "size": "single",
+          "amount": 2500
+        }
+      ],
+      "image": "/assets/products/garlic-bread.jpg",
+      "poster": "/assets/posters/garlic-bread.webp",
+      "model": "/models/garlic-bread.glb",
+      "qr": "/qrcodes/garlic-bread.png",
+      "source": {
+        "menuPage": "menu/original/01-appetizers-hot.jpg",
+        "originalFile": "images/appetizers-hot.jpg"
+      },
+      "placeholders": [],
+      "notes": ""
+    },
+    {
+      "id": "ah-03",
+      "slug": "lasagna",
+      "category": "appetizers-hot",
+      "menuNumber": 2,
+      "name": {
+        "en": "Lasagna",
+        "ar": "اللازانيا"
+      },
+      "description": {
+        "en": "with cheese & bolognese sauce",
+        "ar": ""
+      },
+      "prices": [
+        {
+          "size": "single",
+          "amount": 12000
+        }
+      ],
+      "image": "/assets/products/lasagna.jpg",
+      "poster": "/assets/posters/lasagna.webp",
+      "model": "/models/lasagna.glb",
+      "qr": "/qrcodes/lasagna.png",
+      "source": {
+        "menuPage": "menu/original/01-appetizers-hot.jpg",
+        "originalFile": "images/appetizers-hot.jpg"
+      },
+      "placeholders": [],
+      "notes": "Arabic description is not printed on the menu. The red dish shown on the same page is part of the lasagna presentation (confirmed by the restaurant), not a separate product."
+    },
+    {
+      "id": "ah-04",
+      "slug": "fries",
+      "category": "appetizers-hot",
+      "menuNumber": 3,
+      "name": {
+        "en": "Fries",
+        "ar": "البطاط"
+      },
+      "description": {
+        "en": "with special spices",
+        "ar": "مع البهارات الخاصة"
+      },
+      "prices": [
+        {
+          "size": "single",
+          "amount": 2500
+        }
+      ],
+      "image": "/assets/products/fries.jpg",
+      "poster": "/assets/posters/fries.webp",
+      "model": "/models/fries.glb",
+      "qr": "/qrcodes/fries.png",
+      "source": {
+        "menuPage": "menu/original/01-appetizers-hot.jpg",
+        "originalFile": "images/appetizers-hot.jpg"
+      },
+      "placeholders": [],
+      "notes": ""
+    },
+    {
+      "id": "ac-01",
+      "slug": "salad-plate",
+      "category": "appetizers-cold",
+      "menuNumber": 1,
+      "name": {
+        "en": "Fresh & Tasty Salad",
+        "ar": "سلطاتنا"
+      },
+      "description": {
+        "en": "Each salad plate",
+        "ar": "طبق سلطة"
+      },
+      "prices": [
+        {
+          "size": "plate",
+          "amount": 2000
+        }
+      ],
+      "image": "/assets/products/salad-plate.jpg",
+      "poster": "/assets/posters/salad-plate.webp",
+      "model": "/models/salad-plate.glb",
+      "qr": "/qrcodes/salad-plate.png",
+      "source": {
+        "menuPage": "menu/original/02-appetizers-cold.jpg",
+        "originalFile": "images/appetizers-cold.jpg"
+      },
+      "placeholders": [],
+      "notes": "The page shows 12 different salads at one price per plate; their individual names are not printed, so they are one product here. The 3D model shows the first serving board (3 bowls)."
+    }
+  ]
+}
