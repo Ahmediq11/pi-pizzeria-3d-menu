@@ -71,7 +71,8 @@ export function productPage({ p, cfg, url, category, index, total }) {
   return `${head({
     cfg, url, title, image: p.image,
     description: `${p.name.en} (${category.name.en}) in 3D${desc ? ` — ${desc}` : ''}. ${cfg.restaurant.name.en}`,
-    extra: `<script type="module" src="${a('/vendor/model-viewer.min.js')}"></script>
+    extra: `<script>self.ModelViewerElement = { meshoptDecoderLocation: '${a('/vendor/meshopt_decoder.js')}' };</script>
+<script type="module" src="${a('/vendor/model-viewer.min.js')}"></script>
 <script type="module" src="${a('/assets/js/product.js')}"></script>`,
   })}
 <body class="product-page" data-slug="${esc(p.slug)}">

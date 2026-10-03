@@ -485,7 +485,11 @@
         "originalFile": "images/appetizers-hot.jpg"
       },
       "placeholders": [],
-      "notes": ""
+      "notes": "",
+      "viewer": {
+        "cameraOrbit": "70deg 52deg 42%",
+        "cameraTarget": "0.05m 0.03m -0.028m"
+      }
     },
     {
       "id": "ah-03",
@@ -515,7 +519,10 @@
         "originalFile": "images/appetizers-hot.jpg"
       },
       "placeholders": [],
-      "notes": "Arabic description is not printed on the menu. The red dish shown on the same page is part of the lasagna presentation (confirmed by the restaurant), not a separate product."
+      "notes": "Arabic description is not printed on the menu. The red dish shown on the same page is part of the lasagna presentation (confirmed by the restaurant), not a separate product.",
+      "viewer": {
+        "cameraOrbit": "35deg 50deg 70%"
+      }
     },
     {
       "id": "ah-04",
@@ -545,7 +552,10 @@
         "originalFile": "images/appetizers-hot.jpg"
       },
       "placeholders": [],
-      "notes": ""
+      "notes": "",
+      "viewer": {
+        "cameraOrbit": "-25deg 48deg 88%"
+      }
     },
     {
       "id": "ac-01",
@@ -575,7 +585,10 @@
         "originalFile": "images/appetizers-cold.jpg"
       },
       "placeholders": [],
-      "notes": "The page shows 12 different salads at one price per plate; their individual names are not printed, so they are one product here. The 3D model shows the first serving board (3 bowls)."
+      "notes": "The page shows 12 different salads at one price per plate; their individual names are not printed, so they are one product here. The 3D model shows the first serving board (3 bowls).",
+      "viewer": {
+        "cameraOrbit": "-15deg 55deg 92%"
+      }
     }
   ]
 }

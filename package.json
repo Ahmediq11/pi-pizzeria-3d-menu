@@ -15,10 +15,12 @@
     "start": "npm run build && npm run serve",
     "validate": "node scripts/validate.mjs",
     "validate:http": "node scripts/validate.mjs --http",
-    "all": "npm run qr && npm run menu && npm run build && npm run validate"
+    "all": "npm run qr && npm run menu && npm run build && npm run validate",
+    "depth": "python scripts/estimate_depth.py"
   },
   "dependencies": {
-    "@google/model-viewer": "^4.3.1"
+    "@google/model-viewer": "^4.3.1",
+    "meshoptimizer": "^1.2.0"
   },
   "devDependencies": {
     "@gltf-transform/cli": "^4.5.1",
@@ -29,7 +31,8 @@
     "jpeg-js": "^0.4.4",
     "jsqr": "^1.4.0",
     "pngjs": "^7.0.0",
-    "qrcode": "^1.5.4"
+    "qrcode": "^1.5.4",
+    "sharp": "^0.35.5"
   },
   "engines": {
     "node": ">=18"

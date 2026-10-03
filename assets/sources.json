@@ -1,14 +1,5 @@
 {
- "_comment": "Where each product's texture is taken from in the ORIGINAL menu photos (menu/original). Coordinates are in source-image pixels. Used by scripts/prepare_textures.py. Pizza circles were fitted by hand and checked visually.",
- "wood": {
-  "image": "04-pizza-margherita.jpg",
-  "rect": [
-   520,
-   1592,
-   60,
-   105
-  ]
- },
+ "_comment": "Where each product is taken from in the ORIGINAL menu photos (menu/original); pixel coordinates. Used by scripts/estimate_depth.py and scripts/prepare_textures.py. Pizza circles were fitted by hand and checked visually (the exact outline is then measured from the depth map); crust = crust width / radius.",
  "pizzas": {
   "pizza-italian": {
    "image": "03-pizza-italian.jpg",
@@ -119,59 +110,6 @@
    "crust": 0.12
   }
  },
- "patches": {
-  "_comment": "Rotated rectangles [cx, cy, w, h, angleDeg] (OpenCV minAreaRect convention).",
-  "garlic-bread": {
-   "image": "01-appetizers-hot.jpg",
-   "top": [
-    150,
-    1130,
-    205,
-    330,
-    -18
-   ]
-  },
-  "lasagna": {
-   "image": "01-appetizers-hot.jpg",
-   "top": [
-    1000,
-    445,
-    130,
-    215,
-    -27
-   ]
-  },
-  "fries": {
-   "image": "01-appetizers-hot.jpg",
-   "top": [
-    565,
-    1270,
-    360,
-    300,
-    0
-   ]
-  },
-  "salad-plate": {
-   "image": "02-appetizers-cold.jpg",
-   "bowls": [
-    [
-     131,
-     258,
-     64
-    ],
-    [
-     295,
-     259,
-     62
-    ],
-    [
-     457,
-     255,
-     66
-    ]
-   ]
-  }
- },
  "productPhotos": {
   "_comment": "Square crops [x, y, size] of the original page used as the product photo on the product page.",
   "garlic-bread": [
@@ -206,5 +144,110 @@
    935,
    268
   ]
+ },
+ "dishes": {
+  "_comment": "Non-pizza dishes. crop = [x, y, w, h] region of the page that is depth-estimated. m_per_px = real size of one photo pixel: hot page from the green sauce ramekin (261 px, taken as 9 cm across), cold page from the salad bowls (160 px, taken as 10.5 cm across).",
+  "garlic-bread": {
+   "image": "01-appetizers-hot.jpg",
+   "crop": [
+    0,
+    640,
+    400,
+    700
+   ],
+   "m_per_px": 0.0003448,
+   "board_roi": [
+    0,
+    560,
+    600,
+    1040
+   ],
+   "thickness_m": 0.026,
+   "pieces": 2
+  },
+  "lasagna": {
+   "image": "01-appetizers-hot.jpg",
+   "crop": [
+    600,
+    110,
+    480,
+    880
+   ],
+   "m_per_px": 0.0003448,
+   "_note": "The board and lasagna run off the page. Measured by hand in a frame rotated by rectify_deg about rectify_center (board upright): board_rect and lasagna_rect = [x0, y0, x1, y1]; the board's far end is placed with the same margin as its near end. side_strip = [x, y, w, h] of the bolognese band used for the lasagna's sides.",
+   "rectify_center": [
+    840,
+    550
+   ],
+   "rectify_deg": -41.777,
+   "rectify_size": [
+    1500,
+    1300
+   ],
+   "board_rect": [
+    762,
+    212,
+    1162,
+    1006
+   ],
+   "lasagna_rect": [
+    812,
+    381,
+    1131,
+    837
+   ],
+   "side_strip": [
+    816,
+    440,
+    48,
+    380
+   ],
+   "height_m": 0.045
+  },
+  "fries": {
+   "image": "01-appetizers-hot.jpg",
+   "crop": [
+    320,
+    1010,
+    720,
+    520
+   ],
+   "m_per_px": 0.0003448
+  },
+  "salad-plate": {
+   "image": "02-appetizers-cold.jpg",
+   "crop": [
+    30,
+    160,
+    520,
+    230
+   ],
+   "m_per_px": 0.0006562,
+   "tray_roi": [
+    20,
+    150,
+    700,
+    245
+   ],
+   "bowls": [
+    [
+     130.5,
+     258.5,
+     81.2
+    ],
+    [
+     294.5,
+     258.5,
+     78.8
+    ],
+    [
+     455.5,
+     252.5,
+     81.1
+    ]
+   ],
+   "bowl_height_m": 0.048,
+   "bowl_wall_frac": 0.07
+  }
  }
 }

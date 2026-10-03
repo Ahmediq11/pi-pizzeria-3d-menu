@@ -33,6 +33,8 @@ for (const f of fs.readdirSync(path.join(ROOT, 'models')).filter((f) => f.endsWi
 copy('qrcodes', 'qrcodes', (f) => /\.(png|svg)$/.test(f));
 copy('menu/final', 'menu');
 copy('node_modules/@google/model-viewer/dist/model-viewer.min.js', 'vendor/model-viewer.min.js');
+// decoder for EXT_meshopt_compression (the models' geometry), self-hosted instead of a CDN
+copy('node_modules/meshoptimizer/meshopt_decoder.cjs', 'vendor/meshopt_decoder.js');
 
 // ---- pages
 const order = cfg.categories.map((c) => c.id);

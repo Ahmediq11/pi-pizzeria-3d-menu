@@ -3,3 +3,4 @@ dist/
 models/raw/
 *.blend1
 __pycache__/
+assets/depth/

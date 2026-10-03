@@ -33,7 +33,15 @@
             "properties": { "menuPage": { "type": "string" }, "originalFile": { "type": "string" } }
           },
           "placeholders": { "type": "array", "items": { "enum": ["name", "description", "prices", "image", "model"] } },
-          "notes": { "type": "string" }
+          "notes": { "type": "string" },
+          "viewer": {
+            "type": "object",
+            "description": "Per-product model-viewer camera (overrides config/site.config.json viewer.default and viewer.<category>).",
+            "properties": {
+              "cameraOrbit": { "type": "string" }, "cameraTarget": { "type": "string" },
+              "minCameraOrbit": { "type": "string" }, "maxCameraOrbit": { "type": "string" }
+            }
+          }
         }
       }
     }

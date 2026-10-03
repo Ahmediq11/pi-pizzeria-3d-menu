@@ -11,6 +11,9 @@ import jsQR from 'jsqr';
 import { PNG } from 'pngjs';
 import jpeg from 'jpeg-js';
 import validator from 'gltf-validator';
+import { NodeIO } from '@gltf-transform/core';
+import { ALL_EXTENSIONS } from '@gltf-transform/extensions';
+import { MeshoptDecoder } from 'meshoptimizer';
 import { ROOT, loadConfig, loadProducts, productPath, productUrl } from './lib/config.mjs';
 
 const cfg = loadConfig();
@@ -52,6 +55,14 @@ for (const p of products) {
 }
 
 // ---------------------------------------------------------------- 2. files
+// The validator cannot read meshopt-compressed buffers: validate the decoded model.
+await MeshoptDecoder.ready;
+const gltfIO = new NodeIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({ 'meshopt.decoder': MeshoptDecoder });
+async function decompressed(buf) {
+  const doc = await gltfIO.readBinary(new Uint8Array(buf));
+  doc.getRoot().listExtensionsUsed().find((e) => e.extensionName === 'EXT_meshopt_compression')?.dispose();
+  return gltfIO.writeBinary(doc);
+}
 const glbPromises = [];
 for (const p of products) {
   for (const k of ['image', 'poster', 'model', 'qr']) {
@@ -70,7 +81,7 @@ for (const p of products) {
     const buf = fs.readFileSync(abs(p.model));
     if (buf.readUInt32LE(0) !== 0x46546c67 || buf.readUInt32LE(4) !== 2) err(`${p.slug}: ${p.model} is not a glTF 2.0 binary`);
     if (buf.length > MODEL_BUDGET) warn(`${p.slug}: model is ${(buf.length / 1048576).toFixed(2)} MB (budget 1.5 MB)`);
-    glbPromises.push(validator.validateBytes(new Uint8Array(buf), { maxIssues: 50 }).then((r) => {
+    glbPromises.push(decompressed(buf).then((bytes) => validator.validateBytes(bytes, { maxIssues: 50 })).then((r) => {
       if (r.issues.numErrors) err(`${p.slug}: glTF validator: ${r.issues.messages.filter((m) => m.severity === 0).map((m) => m.code).join(', ')}`);
       const tris = r.info?.totalTriangleCount ?? 0;
       return { slug: p.slug, kb: Math.round(buf.length / 1024), tris, warnings: r.issues.numWarnings };

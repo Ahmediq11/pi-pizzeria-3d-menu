@@ -16,3 +16,5 @@ const run = (cmd, a) => {
 };
 run(blender, args);
 run(process.execPath, [path.join(ROOT, 'scripts', 'optimize-models.mjs'), ...slugs]);
+// keep models/source/menu-models.blend (one scene per product) in step with the GLBs
+run(blender, ['-b', '--factory-startup', '-P', path.join(ROOT, 'blender', 'save_blend.py')]);

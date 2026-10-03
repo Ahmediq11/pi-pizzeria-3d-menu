@@ -92,13 +92,13 @@
       "cameraOrbit": "0deg 58deg 100%",
       "cameraTarget": "auto auto auto",
       "minCameraOrbit": "auto 5deg auto",
-      "maxCameraOrbit": "auto 90deg auto"
+      "maxCameraOrbit": "auto 80deg auto"
     },
     "pizza": {
-      "cameraOrbit": "180deg 56deg 66%",
-      "cameraTarget": "0m 0.012m -0.072m",
-      "minCameraOrbit": "auto 5deg 30%",
-      "maxCameraOrbit": "auto 90deg 140%"
+      "cameraOrbit": "180deg 48deg 58%",
+      "cameraTarget": "0m 0.012m 0m",
+      "minCameraOrbit": "auto 5deg 25%",
+      "maxCameraOrbit": "auto 80deg 120%"
     }
   }
 }

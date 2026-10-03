@@ -1,11 +1,14 @@
 // Optimise the raw Blender exports for mobile web delivery.
 //   models/raw/<slug>.glb  ->  models/<slug>.glb
-// prune unused data, dedupe accessors/textures, weld, and quantise vertex
-// attributes (KHR_mesh_quantization: decoded natively by three.js/model-viewer,
-// so no external decoder download is needed on the phone).
+// prune unused data, dedupe, weld, quantise vertex attributes, re-encode the
+// textures as WebP (EXT_texture_webp) and compress the geometry with meshopt
+// (EXT_meshopt_compression). model-viewer decodes both natively; the meshopt
+// decoder is self-hosted (vendor/meshopt_decoder.js, see scripts/build.mjs).
 import { NodeIO } from '@gltf-transform/core';
 import { ALL_EXTENSIONS } from '@gltf-transform/extensions';
-import { dedup, prune, quantize, weld } from '@gltf-transform/functions';
+import { dedup, meshopt, prune, quantize, textureCompress, weld } from '@gltf-transform/functions';
+import { MeshoptDecoder, MeshoptEncoder } from 'meshoptimizer';
+import sharp from 'sharp';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -15,7 +18,12 @@ const RAW = path.join(ROOT, 'models', 'raw');
 const OUT = path.join(ROOT, 'models');
 const only = process.argv.slice(2);
 
-const io = new NodeIO().registerExtensions(ALL_EXTENSIONS);
+await MeshoptEncoder.ready;
+await MeshoptDecoder.ready;
+const io = new NodeIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({
+  'meshopt.encoder': MeshoptEncoder,
+  'meshopt.decoder': MeshoptDecoder,
+});
 const files = fs.readdirSync(RAW).filter((f) => f.endsWith('.glb'))
   .filter((f) => !only.length || only.includes(path.basename(f, '.glb')));
 
@@ -27,6 +35,10 @@ for (const f of files) {
     dedup(),
     weld(),
     quantize({ quantizePosition: 14, quantizeNormal: 10, quantizeTexcoord: 12 }),
+    // photo colour: high quality; normal maps: higher still (blocky normals show as lighting artefacts)
+    textureCompress({ encoder: sharp, targetFormat: 'webp', slots: /^(?!normalTexture).*$/, quality: 88 }),
+    textureCompress({ encoder: sharp, targetFormat: 'webp', slots: /^normalTexture$/, quality: 94 }),
+    meshopt({ encoder: MeshoptEncoder, level: 'medium' }),
   );
   const out = path.join(OUT, f);
   await io.write(out, doc);
